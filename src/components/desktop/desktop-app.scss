@@ -1,0 +1,16 @@
+@import '../../appStyles/app-styles.scss';
+
+.desktop-app {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: $background;
+
+  .header {
+    height: 80px;
+    width: 100%;
+  }
+}
