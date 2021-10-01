@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react';
 import React from 'react';
 
-import { AppState } from './AppState';
+import { AppState } from './state/AppState';
 import { DesktopApp } from './components/desktop/DesktopApp';
 
 @observer

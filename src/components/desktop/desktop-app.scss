@@ -7,10 +7,22 @@
   display: flex;
   flex-direction: column;
 
-  background-color: $background;
+  background-color: $header;
 
   .header {
-    height: 80px;
+    height: 10%;
     width: 100%;
+
+    border: 1px solid red;
+  }
+
+  .page-container {
+    height: 90%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
