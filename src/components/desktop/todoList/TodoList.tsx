@@ -2,6 +2,7 @@ import { observer } from 'mobx-react';
 import React from 'react';
 import { AppState } from '../../../state/AppState';
 import { ListHeader } from './ListHeader';
+import { ListItemDisplay } from './ListItemDisplay';
 
 import './todo-list.scss';
 
@@ -16,7 +17,10 @@ export class TodoList extends React.PureComponent<TodoListProps> {
 
     return (
       <div className={'todo-list'}>
-        <ListHeader appState={appState} />
+        <div className={'todo-header'}>
+          <ListHeader appState={appState} />
+        </div>
+        <div className={'todo-items'}></div>
       </div>
     );
   }

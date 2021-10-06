@@ -17,6 +17,8 @@ export class AppState {
     console.log(this.listMap);
   }
 
+  @action setListName(list: List, newName: string) {}
+
   @action createRandomId() {
     let charsForId = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let lengthOfId = 6;

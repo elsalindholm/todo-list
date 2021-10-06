@@ -3,6 +3,7 @@ import { HeaderDesktop } from './HeaderDesktop';
 
 import { ListOfLists } from './ListOfLists';
 import { AppState } from '../../state/AppState';
+import { TodoList } from './todoList/TodoList';
 
 import './desktop-app.scss';
 
@@ -22,6 +23,7 @@ export class DesktopApp extends React.PureComponent<DesktopAppProps> {
         <div className={'page-container'}>
           <div>My lists</div>
           <ListOfLists appState={appState} createList={() => appState.createList()} />
+          <TodoList appState={appState} />
         </div>
       </div>
     );

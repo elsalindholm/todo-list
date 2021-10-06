@@ -1,0 +1,19 @@
+@import '../../../appStyles/app-styles.scss';
+
+.list-header {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  .list-name-input {
+    height: 100%;
+    width: 90%;
+  }
+
+  .delete-list-button {
+    height: 50%;
+    width: 10%;
+  }
+}
