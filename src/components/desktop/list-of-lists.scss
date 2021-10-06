@@ -12,9 +12,27 @@
   align-items: center;
   .list-container {
     .list-nav-button {
+      padding: 2px 5px;
+      margin: 0 5px;
+      font-size: 20px;
+
+      color: $light-text;
+      border: 3px solid $light-text;
+      border-radius: 15px;
+
+      background-color: transparent;
     }
   }
 
   .add-list-button {
+    padding: 2px 5px;
+    margin: 0 5px;
+    font-size: 20px;
+
+    color: $light-text;
+    border: 3px solid $light-text;
+    border-radius: 15px;
+
+    background-color: $header;
   }
 }

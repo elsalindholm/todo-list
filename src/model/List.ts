@@ -1,3 +1,5 @@
+import { action } from 'mobx';
+
 import { ListItem } from './ListItem';
 
 export class List {
@@ -8,5 +10,9 @@ export class List {
   constructor(id: string, name: string) {
     this.id = id;
     this.name = name;
+  }
+
+  @action public setName(newName: string) {
+    this.name = newName;
   }
 }

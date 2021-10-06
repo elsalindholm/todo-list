@@ -4,6 +4,7 @@ import { List } from '../model/List';
 export class AppState {
   @observable public listMap = new Map<string, List>();
   @observable public lists: List[] = [];
+  @observable public selectedList: List;
 
   @action createList() {
     let listId = this.createRandomId();
