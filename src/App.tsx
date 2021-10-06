@@ -8,6 +8,6 @@ import { DesktopApp } from './components/desktop/DesktopApp';
 export class App extends React.PureComponent {
   private readonly appState = new AppState();
   public render() {
-    return <DesktopApp />;
+    return <DesktopApp appState={this.appState} />;
   }
 }

@@ -3,6 +3,7 @@ import { List } from '../model/List';
 
 export class AppState {
   @observable public listMap = new Map<string, List>();
+  @observable public lists: List[] = [];
 
   @action createList() {
     let listId = this.createRandomId();
@@ -10,6 +11,7 @@ export class AppState {
 
     const newList = new List(listId, listName);
     this.listMap.set(newList.id, newList);
+    this.lists.push(newList);
 
     console.log(this.listMap);
   }
