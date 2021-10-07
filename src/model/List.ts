@@ -1,10 +1,11 @@
-import { action } from 'mobx';
+import { action, observable } from 'mobx';
+import { RandomUtils } from '../utils/RandomUtils';
 
 import { ListItem } from './ListItem';
 
 export class List {
   public id: string;
-  public name: string;
+  @observable public name: string;
   public listItems: ListItem[] = [];
 
   constructor(id: string, name: string) {
@@ -14,5 +15,14 @@ export class List {
 
   @action public setName(newName: string) {
     this.name = newName;
+  }
+
+  @action addListItem() {
+    const newListItem: ListItem = {
+      id: RandomUtils.createRandomId(),
+      text: '',
+      completed: false,
+    };
+    this.listItems.push(newListItem);
   }
 }

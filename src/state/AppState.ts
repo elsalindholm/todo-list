@@ -7,6 +7,7 @@ export class AppState {
   @observable public listMap = new Map<string, List>();
   @observable public lists: List[] = [];
   @observable public selectedList: List;
+  public maxNoOfLists: number = 5;
 
   @action createList() {
     let listId = RandomUtils.createRandomId();
@@ -19,7 +20,9 @@ export class AppState {
     console.log(this.listMap);
   }
 
-  @action setListName(list: List, newName: string) {}
+  @action setListName(list: List, newName: string) {
+    list.setName(newName);
+  }
 
   @action selectList(list: List) {
     this.selectedList = list;
