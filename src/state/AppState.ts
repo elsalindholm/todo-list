@@ -1,5 +1,6 @@
 import { action, observable } from 'mobx';
 import { List } from '../model/List';
+import { RandomUtils } from '../utils/RandomUtils';
 
 export class AppState {
   @observable public listMap = new Map<string, List>();
@@ -7,7 +8,7 @@ export class AppState {
   @observable public selectedList: List;
 
   @action createList() {
-    let listId = this.createRandomId();
+    let listId = RandomUtils.createRandomId();
     let listName = 'List';
 
     const newList = new List(listId, listName);
@@ -18,17 +19,4 @@ export class AppState {
   }
 
   @action setListName(list: List, newName: string) {}
-
-  @action createRandomId() {
-    let charsForId = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let lengthOfId = 6;
-    let randomId: string[] = [];
-
-    for (let i = 0; i < lengthOfId; i++) {
-      let index = Math.floor(Math.random() * (charsForId.length - 1));
-      randomId.push(charsForId[index]);
-    }
-    console.log(randomId);
-    return randomId.join('');
-  }
 }
