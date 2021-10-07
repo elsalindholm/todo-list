@@ -23,7 +23,7 @@ export class TodoList extends React.PureComponent<TodoListProps> {
             <ListHeader appState={appState} />
           </div>
           <div className={'todo-items'}>
-            <ListItemDisplay />
+            <ListItemDisplay appState={appState} />
           </div>
         </>
       );

@@ -6,7 +6,7 @@ import { ListItem } from './ListItem';
 export class List {
   public id: string;
   @observable public name: string;
-  public listItems: ListItem[] = [];
+  @observable public listItems: ListItem[] = [];
 
   constructor(id: string, name: string) {
     this.id = id;
@@ -18,11 +18,10 @@ export class List {
   }
 
   @action addListItem() {
-    const newListItem: ListItem = {
-      id: RandomUtils.createRandomId(),
-      text: '',
-      completed: false,
-    };
+    let id = RandomUtils.createRandomId();
+
+    const newListItem = new ListItem(id, '');
+
     this.listItems.push(newListItem);
   }
 }
