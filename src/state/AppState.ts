@@ -1,4 +1,5 @@
 import { action, observable } from 'mobx';
+
 import { List } from '../model/List';
 import { RandomUtils } from '../utils/RandomUtils';
 
@@ -19,4 +20,8 @@ export class AppState {
   }
 
   @action setListName(list: List, newName: string) {}
+
+  @action selectList(list: List) {
+    this.selectedList = list;
+  }
 }

@@ -28,6 +28,10 @@ export class ListOfLists extends React.PureComponent<ListOfListsProps> {
   }
 
   private renderList(list: List) {
-    return <button className={'list-nav-button'}>{list.name}</button>;
+    return (
+      <button className={'list-nav-button'} onClick={() => this.props.appState.selectList(list)}>
+        {list.name}
+      </button>
+    );
   }
 }

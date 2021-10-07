@@ -15,13 +15,20 @@ export class TodoList extends React.PureComponent<TodoListProps> {
   render() {
     const { appState } = this.props;
 
-    return (
-      <div className={'todo-list'}>
-        <div className={'todo-header'}>
-          <ListHeader appState={appState} />
-        </div>
-        <div className={'todo-items'}></div>
-      </div>
-    );
+    let content: JSX.Element;
+    if (appState.selectedList) {
+      content = (
+        <>
+          <div className={'todo-header'}>
+            <ListHeader appState={appState} />
+          </div>
+          <div className={'todo-items'}></div>
+        </>
+      );
+    } else {
+      content = <>No list selected</>;
+    }
+
+    return <div className={'todo-list'}>{content}</div>;
   }
 }

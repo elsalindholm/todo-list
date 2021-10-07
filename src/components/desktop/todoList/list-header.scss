@@ -3,17 +3,26 @@
 .list-header {
   height: 100%;
   width: 100%;
+  padding: 0 10px;
+
+  background-color: white;
 
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   .list-name-input {
-    height: 100%;
+    height: auto;
     width: 90%;
+
+    input {
+      font-size: 25px;
+    }
   }
 
   .delete-list-button {
-    height: 50%;
-    width: 10%;
+    height: auto;
+    width: 80px;
   }
 }

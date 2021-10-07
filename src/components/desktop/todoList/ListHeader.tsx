@@ -15,7 +15,12 @@ export class ListHeader extends React.PureComponent<ListHeaderProps> {
     return (
       <div className={'list-header'}>
         <div className={'list-name-input'}>
-          <input type={'text'} id={'list-name'} name={'list-name'}></input>
+          <input
+            type={'text'}
+            id={'list-name'}
+            name={'list-name'}
+            value={appState.selectedList.name}
+          ></input>
         </div>
         <button className={'delete-list-button'}>Delete list</button>
       </div>
