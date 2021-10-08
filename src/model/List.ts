@@ -24,4 +24,8 @@ export class List {
 
     this.listItems.push(newListItem);
   }
+
+  @action deleteListItem(listItem: ListItem) {
+    return (this.listItems = this.listItems.filter((item) => item !== listItem));
+  }
 }

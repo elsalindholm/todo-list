@@ -26,7 +26,7 @@ export class ListItemDisplay extends React.PureComponent<ListItemDisplayProps> {
     let listItems: JSX.Element[] = [];
 
     appState.selectedList.listItems.forEach((listItem) => {
-      listItems.push(<ListItemRow listItem={listItem} />);
+      listItems.push(<ListItemRow appState={appState} listItem={listItem} />);
     });
     return listItems;
   }

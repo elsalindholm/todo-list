@@ -2,15 +2,17 @@ import { observer } from 'mobx-react';
 import React from 'react';
 
 import { ListItem } from '../../../model/ListItem';
+import { AppState } from '../../../state/AppState';
 
 interface ListItemRowProps {
+  appState: AppState;
   listItem: ListItem;
 }
 
 @observer
 export class ListItemRow extends React.PureComponent<ListItemRowProps> {
   render() {
-    const { listItem } = this.props;
+    const { appState, listItem } = this.props;
 
     return (
       <div>
@@ -24,7 +26,7 @@ export class ListItemRow extends React.PureComponent<ListItemRowProps> {
             listItem.setListItemText(event.target.value)
           }
         ></input>
-        <button>Delete</button>
+        <button onClick={() => appState.selectedList.deleteListItem(listItem)}>Delete</button>
       </div>
     );
   }
