@@ -1,5 +1,4 @@
 import React from 'react';
-import { HeaderDesktop } from './HeaderDesktop';
 
 import { ListOfLists } from './ListOfLists';
 import { AppState } from '../../state/AppState';
@@ -17,11 +16,7 @@ export class DesktopApp extends React.PureComponent<DesktopAppProps> {
 
     return (
       <div className={'desktop-app'}>
-        <div className={'header'}>
-          <HeaderDesktop />
-        </div>
         <div className={'page-container'}>
-          <div>My lists</div>
           <ListOfLists appState={appState} createList={() => appState.createList()} />
           <TodoList appState={appState} />
         </div>

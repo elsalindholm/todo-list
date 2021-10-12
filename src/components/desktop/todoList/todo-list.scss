@@ -5,7 +5,8 @@
   width: 500px;
   margin: 10px;
 
-  border: 1px solid white;
+  border: 3px solid white;
+  border-radius: 15px;
 
   .todo-header {
     height: 20%;
@@ -16,6 +17,25 @@
     height: 80%;
     width: 100%;
 
-    border: 1px solid pink;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+.todo-list-welcome-text {
+  width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin: 15px;
+
+    text-align: center;
+
+    font-family: $quicksand;
+    font-size: 25px;
+    color: $light-text;
   }
 }
