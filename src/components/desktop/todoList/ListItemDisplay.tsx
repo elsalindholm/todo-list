@@ -3,6 +3,8 @@ import React from 'react';
 import { AppState } from '../../../state/AppState';
 import { ListItemRow } from './ListItemRow';
 
+import './list-item-display.scss';
+
 interface ListItemDisplayProps {
   appState: AppState;
 }
@@ -13,11 +15,11 @@ export class ListItemDisplay extends React.PureComponent<ListItemDisplayProps> {
     const { appState } = this.props;
 
     return (
-      <div>
+      <div className={'list-item-display'}>
         <button className={'add-task-button'} onClick={() => appState.selectedList.addListItem()}>
           + Add task
         </button>
-        <div>{this.renderToDoListItems()}</div>
+        <div className={'list-items'}>{this.renderToDoListItems()}</div>
       </div>
     );
   }
