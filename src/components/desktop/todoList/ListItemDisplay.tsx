@@ -17,7 +17,7 @@ export class ListItemDisplay extends React.PureComponent<ListItemDisplayProps> {
     return (
       <div className={'list-item-display'}>
         <button className={'add-task-button'} onClick={() => appState.selectedList.addListItem()}>
-          + Add task
+          + add task
         </button>
         <div className={'list-items'}>{this.renderToDoListItems()}</div>
       </div>

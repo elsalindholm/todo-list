@@ -35,7 +35,7 @@ export class ListItemRow extends React.PureComponent<ListItemRowProps> {
           className={'delete-list-item-button'}
           onClick={() => appState.selectedList.deleteListItem(listItem)}
         >
-          Delete
+          -
         </button>
       </div>
     );

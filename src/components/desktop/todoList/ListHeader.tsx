@@ -31,7 +31,7 @@ export class ListHeader extends React.PureComponent<ListHeaderProps> {
           className={'delete-list-button'}
           onClick={() => appState.deleteList(appState.selectedList)}
         >
-          Delete list
+          delete list
         </button>
       </div>
     );
