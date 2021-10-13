@@ -3,7 +3,7 @@ import { action, observable } from 'mobx';
 export class ListItem {
   public id: string;
   @observable public text: string;
-  public completed: boolean = false;
+  @observable public completed: boolean = false;
 
   constructor(id: string, text: string) {
     this.id = id;

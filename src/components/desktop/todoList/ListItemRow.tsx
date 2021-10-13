@@ -16,10 +16,17 @@ export class ListItemRow extends React.PureComponent<ListItemRowProps> {
   render() {
     const { appState, listItem } = this.props;
 
+    let checked = listItem.completed;
+
     return (
       <div className={'list-item-row'}>
         <div className={'tick-box'}>
-          <input className={'tick-box-input'} type={'checkbox'}></input>
+          <input
+            className={'tick-box-input'}
+            type={'checkbox'}
+            onChange={() => appState.tickListItem(listItem)}
+            checked={checked}
+          ></input>
         </div>
         <input
           type={'text'}

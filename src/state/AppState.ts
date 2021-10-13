@@ -1,10 +1,10 @@
 import { action, observable } from 'mobx';
 
 import { List } from '../model/List';
+import { ListItem } from '../model/ListItem';
 import { RandomUtils } from '../utils/RandomUtils';
 
 export class AppState {
-  //@observable public listMap = new Map<string, List>();
   @observable public lists: List[] = [];
   @observable public selectedList: List;
 
@@ -13,10 +13,10 @@ export class AppState {
     let listName = 'List';
 
     const newList = new List(listId, listName);
-    //this.listMap.set(newList.id, newList);
+
     this.lists.push(newList);
 
-    //console.log(this.listMap);
+    this.selectedList = newList;
   }
 
   @action setListName(list: List, newName: string) {
@@ -32,5 +32,10 @@ export class AppState {
 
     this.lists.splice(index, 1);
     this.selectedList = undefined;
+  }
+
+  @action tickListItem(listItem: ListItem) {
+    listItem.completed = !listItem.completed;
+    console.log(listItem.completed);
   }
 }
