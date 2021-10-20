@@ -36,6 +36,5 @@ export class AppState {
 
   @action tickListItem(listItem: ListItem) {
     listItem.completed = !listItem.completed;
-    console.log(listItem.completed);
   }
 }
